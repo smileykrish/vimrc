@@ -16,3 +16,21 @@
 [submodule "sources_non_forked/vim-pathogen"]
 	path = sources_non_forked/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "sources_non_forked/vim-gitgutter"]
+	path = sources_non_forked/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "sources_non_forked/vim-surround"]
+	path = sources_non_forked/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "sources_non_forked/vim-snippets"]
+	path = sources_non_forked/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "sources_non_forked/vim-snipmate"]
+	path = sources_non_forked/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "sources_non_forked/vim-addon-mw-utils"]
+	path = sources_non_forked/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "sources_non_forked/tlib"]
+	path = sources_non_forked/tlib
+	url = https://github.com/vim-scripts/tlib.git

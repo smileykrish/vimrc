@@ -10,7 +10,8 @@ echo 'set runtimepath+=~/.vim_config
 source ~/.vim_config/vimrcs/vimrc.vim
 source ~/.vim_config/vimrcs/filetypes.vim
 source ~/.vim_config/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+source ~/.vim_config/vimrcs/extended.vim
+source ~/.vim_config/sources_forked/newheader/newheader.vim
 
 try
 source ~/.vim_config/my_configs.vim

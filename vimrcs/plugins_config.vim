@@ -169,5 +169,16 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
+let g:gitgutter_highlight_lines=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => newheader
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nmap <F7> :call CreateFunctionHeader()<CR>
+" if has("menu")
+ "  amenu &Local.&Function\ Header<Tab><F7>   <F7>
+" endif
+
