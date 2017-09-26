@@ -46,7 +46,7 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
-set history=500
+set history=10000
 
 " Enable filetype plugins
 filetype plugin on
@@ -65,7 +65,7 @@ nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+"command W w !sudo tee % > /dev/null
 
 set tags+=$BASE_DIR/tags
 
@@ -198,6 +198,12 @@ set smarttab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+set smartindent
+set autoindent
+set cindent
+set softtabstop=2
+set cinkeys=0{,0},:,;,o,!<Tab>,0#,!^F
+set textwidth=80
 
 " Linebreak on 500 characters
 set lbr
@@ -207,6 +213,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+set colorcolumn=80
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -328,6 +335,7 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
+map <F5> :setlocal spell! spelllang=en_us<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
@@ -344,7 +352,9 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-set spell spelllang=en_us
+"set spell spelllang=en_us
+
+map <F6> :! $HOME/scripts/component_tar.sh<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
