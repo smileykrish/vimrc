@@ -181,14 +181,14 @@ function! CreateFunctionHeader()
    " and reformat arguments to align neatly. Then insert it
    
    if s:Hdr_SearchText( top_line, bot_line, '\<args\>' ) == 1
-      let leading_spaces = s:Replicate( " ", col(".") - 10 )
+      let leading_spaces = s:Replicate( " ", col(".") - 10)
       let replace_str1 = "\\1 - \<CR>" . leading_spaces . "\\2"
       let arg_list = substitute( arg_list, '\(.\),\(.\)', replace_str1, "" )
       let arg_list = substitute( arg_list, '\(.\),\(.\)', "\\1 - \<CR>\\2", "g" )
-      let arg_list = substitute( arg_list, ',', ' - ', '' )
+      let arg_list = substitute( arg_list, ',', ' -', '' )
       for args_list in g:args_desc_list
         let arg_tok = '\<' . args_list[0] . "-" 
-        let arg_desc_tok = args_list[0] . "-" . args_list[1]
+        let arg_desc_tok = "@param[in] " . args_list[0] . "-" . args_list[1]
         let arg_list = substitute( arg_list, arg_tok, arg_desc_tok, '' )
       endfor
       exe "norm! cw" . arg_list . "\<esc>"

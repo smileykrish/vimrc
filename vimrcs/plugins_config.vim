@@ -175,10 +175,14 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => newheader
+" => taglist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"nmap <F7> :call CreateFunctionHeader()<CR>
-" if has("menu")
- "  amenu &Local.&Function\ Header<Tab><F7>   <F7>
-" endif
+map <F8> :TlistToggle<CR>
+"map <F9> :TlistAddFilesRecursive $BASE_DIR."/src" *.cc <CR> :TlistAddFilesRecursive $BASE_DIR."/src" *.h <CR>
+map <F9> :TlistAddFilesRecursive src *.cc<CR>:TlistAddFilesRecursive src *.h<CR>
+let Tlist_Auto_Open = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => cscope_map
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocscopeverbose 

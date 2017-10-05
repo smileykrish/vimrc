@@ -44,40 +44,31 @@
 
 == Comments.file description impl == map:cfdi, shortcut:c, start, noindent ==
 /*
- * =====================================================================================
+ * @cond      EXT_IF_INTEGRATOR
+ * @file      |FILENAME|
+ * @copyright |COPYRIGHT|
  *
- *       Filename:  |FILENAME|
+ * @brief     <CURSOR>
  *
- *    Description:  <CURSOR>
+ * @author    |AUTHOR|
+ * @date      |DATE|
  *
- *        Version:  1.0
- *        Created:  |DATE| |TIME|
- *       Revision:  none
- *       Compiler:  gcc
+ * Document  
  *
- *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *   Organization:  |ORGANIZATION|
- *
- * =====================================================================================
  */
 
 == Comments.file description header == map:cfdh, shortcut:h, start, noindent ==
 /*
- * =====================================================================================
+ * @file      |FILENAME|
+ * @copyright |COPYRIGHT|
  *
- *       Filename:  |FILENAME|
+ * @brief     <CURSOR>
  *
- *    Description:  <CURSOR>
+ * @author    |AUTHOR|
+ * @date      |DATE|
  *
- *        Version:  1.0
- *        Created:  |DATE| |TIME|
- *       Revision:  none
- *       Compiler:  gcc
+ * Document  
  *
- *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *   Organization:  |ORGANIZATION|
- *
- * =====================================================================================
  */
 == ENDTEMPLATE ==
 

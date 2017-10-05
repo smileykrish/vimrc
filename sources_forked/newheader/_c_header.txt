@@ -1,14 +1,10 @@
-/*
- * @brief
- *       text
+/**
+ * @brief text
  *
- * @inParam
- *       args
+ * args
  *
- * @outParam
- *       None
- * @retval
- *       Returns PhantomDrvSuccess on success
- *       Returns PhantomDrvFailure on failure
+ * @param[out] None
+ * @retval Returns true on success
+ * @retval Returns false on failure
  */
 

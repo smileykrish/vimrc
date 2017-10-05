@@ -34,3 +34,6 @@
 [submodule "sources_non_forked/tlib"]
 	path = sources_non_forked/tlib
 	url = https://github.com/vim-scripts/tlib.git
+[submodule "sources_non_forked/cscope_maps"]
+	path = sources_non_forked/cscope_maps
+	url = https://github.com/chazy/cscope_maps.git
