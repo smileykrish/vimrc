@@ -357,6 +357,9 @@ map <leader>pp :setlocal paste!<cr>
 
 map <F6> :! $HOME/scripts/component_tar.sh<CR>
 
+" Automatically removing all trailing whitespace
+autocmd FileType c,cpp,h autocmd BufWritePre <buffer> %s/\s\+$//e
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

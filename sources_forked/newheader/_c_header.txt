@@ -3,8 +3,6 @@
  *
  * args
  *
- * @param[out] None
- * @retval Returns true on success
- * @retval Returns false on failure
+ * @retval Returns None
  */
 
