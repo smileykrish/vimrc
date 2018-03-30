@@ -46,7 +46,7 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
-set history=10000
+set history=1000
 
 " Enable filetype plugins
 filetype plugin on
@@ -114,7 +114,7 @@ set smartcase
 " Highlight search results
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Incremental search, Makes search act like search in modern browsers
 set incsearch 
 
 " Don't redraw while executing macros (good performance config)
@@ -359,6 +359,9 @@ map <F6> :! $HOME/scripts/component_tar.sh<CR>
 
 " Automatically removing all trailing whitespace
 autocmd FileType c,cpp,h autocmd BufWritePre <buffer> %s/\s\+$//e
+
+" Enables to use bash alase inside the VIM in non-intrative mode
+let $BASH_ENV = "~/scripts/bash_alias.sh"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
