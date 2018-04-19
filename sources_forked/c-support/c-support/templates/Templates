@@ -10,7 +10,7 @@ InterfaceVersion ( '1.0' )
 §  Settings
 § ==========================================================
 
-SetMacro( 'AUTHOR',       'Krishnamoorthy Natesan')
+SetMacro( 'AUTHOR',       'Krishnamoorthy N')
 SetMacro( 'AUTHORREF',    '' )
 SetMacro( 'EMAIL',        '' )
 SetMacro( 'ORGANIZATION', '' )

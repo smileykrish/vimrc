@@ -37,3 +37,6 @@
 [submodule "sources_non_forked/cscope_maps"]
 	path = sources_non_forked/cscope_maps
 	url = https://github.com/chazy/cscope_maps.git
+[submodule "sources_non_forked/CCTree"]
+	path = sources_non_forked/CCTree
+	url = https://github.com/hari-rangarajan/CCTree.git
