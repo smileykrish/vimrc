@@ -4,17 +4,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *  Description:  main function
- * =====================================================================================
+/** 
+ * @brief  main function
+ * @param[in] argc - Argument count
+ * @param[in] argv - Argument list
+ *
  */
-	int
-main ( int argc, char *argv[] )
-{
+int main (int argc, char *argv[]) {
 	printf ("\nProgram %s\n\n", argv[0] );
 
-	return EXIT_SUCCESS;
-}		/* ----------  end of function main  ---------- */
+	return 0;
+}  /* ----------  end of function main  ---------- */
 
