@@ -1,14 +1,8 @@
 #!/bin/sh
 set -e
 
-cd ~/.vim_config
-git submodule update --init --recursive
-
-rm -f autoload/pathogen.vim
-cp sources_non_forked/vim-pathogen/autoload/pathogen.vim autoload/pathogen.vim
-
-echo 'set runtimepath+=~/.vim_config
-
+echo '
+source ~/.vim_config/vimrcs/Vundle.vim
 source ~/.vim_config/vimrcs/vimrc.vim
 source ~/.vim_config/vimrcs/filetypes.vim
 source ~/.vim_config/vimrcs/plugins_config.vim

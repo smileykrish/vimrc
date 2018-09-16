@@ -184,7 +184,8 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
-
+set path+=**
+set wildmenu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
