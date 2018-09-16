@@ -2,6 +2,8 @@
 set -e
 
 cd ~/.vim_config
+git submodule update --init --recursive
+
 rm -f autoload/pathogen.vim
 cp sources_non_forked/vim-pathogen/autoload/pathogen.vim autoload/pathogen.vim
 
