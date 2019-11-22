@@ -151,16 +151,16 @@ set foldcolumn=1
 syntax enable 
 
 " Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+"if $COLORTERM == 'gnome-terminal'
+ "   set t_Co=256
+"endif
 
 try
     colorscheme desert
 catch
 endtry
 
-set background=dark
+"set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -221,13 +221,16 @@ set colorcolumn=80
 """"""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+"vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+"vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set autoread
+
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <c-space> ?
@@ -285,11 +288,11 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
-set laststatus=2
+"set laststatus=2
 
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ Line:\ %l\ \ Column:\ %c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ Line:\ %l\ \ Column:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -356,13 +359,27 @@ map <leader>pp :setlocal paste!<cr>
 
 "set spell spelllang=en_us
 
-map <F6> :! $HOME/scripts/component_tar.sh<CR>
+map <F6> :wa<CR>:! $HOME/scripts/component_tar.sh<CR>
 
 " Automatically removing all trailing whitespace
 autocmd FileType c,cpp,h autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Enables to use bash alase inside the VIM in non-intrative mode
 let $BASH_ENV = "~/scripts/bash_alias.sh"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => The Silver Searcher
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  " Use ag over grep
+  let g:ackprg = 'ag --vimgrep'
+  " Use Ag with ack.vim
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+" bind K to grep word under cursor
+" nnoremap K :!ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :Ack "\b<C-R><C-W>\b"<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
