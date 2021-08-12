@@ -141,3 +141,5 @@ autocmd FileType vim setlocal commentstring="\ %s
 
 
 let g:airline#extensions#tabline#enabled = 1
+
+let g:DirDiffExcludes = "*.git, tags, *.patch, *.files"

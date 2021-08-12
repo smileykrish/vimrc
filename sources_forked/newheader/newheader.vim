@@ -296,7 +296,7 @@ function! s:Hdr_ReformatText( text, left_margin, right_margin )
 endfunction
 
 function! LoadArgumentList()
-  :let g:filePath="/home/knatesan/scripts/vim/newheader/args_list.data"
+  :let g:filePath=expand($FUNC_ARG_DATA)
   :let arg_list = readfile(fnameescape(g:filePath))
 
   let g:args_desc_list = []

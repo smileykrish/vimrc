@@ -32,7 +32,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/mru.vim'
-Plugin 'chazy/cscope_maps'
+" Plugin 'chazy/cscope_maps'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-repeat'
@@ -42,6 +42,9 @@ Plugin 'powerline/fonts'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'vim-scripts/DirDiff.vim'
+Plugin 'chrisbra/Colorizer'
+Plugin 'nathanalderson/yang.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

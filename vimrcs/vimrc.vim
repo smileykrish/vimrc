@@ -1,28 +1,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
-"       Amir Salihefendic
-"       http://amix.dk - amix@amix.dk
-"
-" Customized By: Krish
+"       Krishnamoorthy Natesan
 "
 " Version: 
-"       6.0 - 01/04/17 14:24:34 
+"       1.0 - 22/11/19 
 "
 " Blog_post: 
-"       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
-"
-" Awesome_version:
-"       Get this config, nice color schemes and lots of plugins!
-"
-"       Install the awesome version from:
-"
-"           https://github.com/amix/vimrc
-"
-" Syntax_highlighted:
-"       http://amix.dk/vim/vimrc.html
-"
-" Raw_version: 
-"       http://amix.dk/vim/vimrc.txt
 "
 " Sections:
 "    -> General
@@ -314,19 +297,6 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for some filetypes ;)
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
-
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -359,10 +329,10 @@ map <leader>pp :setlocal paste!<cr>
 
 "set spell spelllang=en_us
 
-map <F6> :wa<CR>:! $HOME/scripts/component_tar.sh<CR>
+map <F6> :wa<CR>:! $BASH_CONFIG/scripts/component_tar.sh<CR>
 
 " Automatically removing all trailing whitespace
-autocmd FileType c,cpp,h autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType c,cpp,h,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Enables to use bash alase inside the VIM in non-intrative mode
 let $BASH_ENV = "~/scripts/bash_alias.sh"
@@ -435,3 +405,19 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on 
+"    means that you can undo even when you close a buffer/VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn folding on 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set foldmethod=syntax
