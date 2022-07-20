@@ -332,7 +332,7 @@ map <leader>pp :setlocal paste!<cr>
 map <F6> :wa<CR>:! $BASH_CONFIG/scripts/component_tar.sh<CR>
 
 " Automatically removing all trailing whitespace
-"autocmd FileType c,cpp,h,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,h,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Enables to use bash alase inside the VIM in non-intrative mode
 let $BASH_ENV = "~/scripts/bash_alias.sh"

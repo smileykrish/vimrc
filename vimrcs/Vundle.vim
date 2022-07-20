@@ -30,7 +30,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/taglist.vim'
+" Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/mru.vim'
 " Plugin 'chazy/cscope_maps'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -39,12 +39,17 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'powerline/fonts'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/DirDiff.vim'
 Plugin 'chrisbra/Colorizer'
 Plugin 'nathanalderson/yang.vim'
+Plugin 'will133/vim-dirdiff'
+Plugin 'powerman/vim-plugin-AnsiEsc'
+" Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'preservim/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,4 +66,5 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+'
 
