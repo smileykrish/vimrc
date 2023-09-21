@@ -236,7 +236,7 @@ map <leader>ba :bufdo bd<cr>
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
-" Useful mappings for managing tabs
+" Use
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
@@ -332,7 +332,9 @@ map <leader>pp :setlocal paste!<cr>
 map <F6> :wa<CR>:! $BASH_CONFIG/scripts/component_tar.sh<CR>
 
 " Automatically removing all trailing whitespace
-autocmd FileType c,cpp,h,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
+" autocmd FileType c,cpp,h,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
+
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 " Enables to use bash alase inside the VIM in non-intrative mode
 let $BASH_ENV = "~/scripts/bash_alias.sh"
@@ -415,7 +417,6 @@ try
     set undofile
 catch
 endtry
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn folding on 
